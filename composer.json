@@ -1,0 +1,40 @@
+{
+  "name": "snake/snake",
+  "type": "project",
+  "description": "Sea Snake Framework is a PHP framework for building web applications.",
+  "keywords": ["sea snake", "snake", "php"],
+  "license": "MIT",
+  "require": {
+    "php": "^8.2",
+    "snake/framework": "^1.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5.10"
+  },
+  "autoload": {
+    "psr-4": {
+      "Bin\\": "bin/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Test\\": "test/"
+    }
+  },
+  "scripts": {
+    "post-autoload-dump": [],
+    "post-update-cmd": [],
+    "post-root-package-install": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ],
+    "post-create-project-cmd": []
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "vendor-dir": "paddler"
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
